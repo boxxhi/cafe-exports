@@ -1,4 +1,4 @@
-# Café Exports - Tienda de Café Premium
+# Coffee Exports - Tienda de Café Premium
 
 Una página web moderna y funcional para un comercio de café, desarrollada con HTML, CSS y JavaScript puro.
 
@@ -12,7 +12,7 @@ Una página web moderna y funcional para un comercio de café, desarrollada con 
 - **Iconos**: Font Awesome para una experiencia visual rica
 
 ### 🛍️ Funcionalidades del Carrito
-- **Agregar Productos**: Botón "Agregar al Carrito" en cada producto
+- **Agregar Productos**: Botón "Seleccionar opciones" para granos de café y "Añadir al carrito" para accesorios
 - **Gestión de Cantidades**: Aumentar/disminuir cantidades
 - **Eliminar Productos**: Botón de eliminación individual
 - **Cálculo Automático**: Total del carrito actualizado en tiempo real
@@ -34,20 +34,17 @@ Una página web moderna y funcional para un comercio de café, desarrollada con 
 
 ## 🎯 Productos Incluidos
 
-La página incluye 12 variedades de café premium de diferentes países:
+La página incluye 6 productos premium:
 
-- Café Colombiano Premium
-- Café Etíope Yirgacheffe
-- Café Guatemalteco Antigua
-- Café Brasileño Santos
-- Café Costa Rica Tarrazú
-- Café Peruano Orgánico
-- Café Mexicano Chiapas
-- Café Nicaragüense Jinotega
-- Café Hondureño Marcala
-- Café Salvadoreño Santa Ana
-- Café Panameño Boquete
-- Café Dominicano Barahona
+### Granos de Café (5 productos):
+- **BALAM FIREBAT GESHA NATURAL - 340G** - $22.00
+- **BALAM FIREBAT PACAMARA HONEY – 340G** - $18.00
+- **CAFÉ CATÉ ESPRESSO - 340G** - $10.00
+- **ES-COFFEE BOURBON GOURMET - 340G** - $9.00
+- **ES-COFFEE PACAMARA - 340G** - $12.00
+
+### Accesorios (1 producto):
+- **IMÁN PEQUEÑO DE CANASTA** - $2.50
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -61,11 +58,19 @@ La página incluye 12 variedades de café premium de diferentes países:
 
 ```
 coffee-exports/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # Funcionalidad JavaScript
-├── README.md           # Este archivo
-└── prompt.txt          # Instrucciones originales
+├── index.html                                    # Página principal
+├── styles.css                                    # Estilos CSS
+├── script.js                                     # Funcionalidad JavaScript
+├── logo.png                                      # Logo de la empresa
+├── BALAM-Firebat-Gesha-Natural-300x300.jpg      # Imagen producto 1
+├── BALAM-Firebat-Pacamara-Honey-300x300.jpg     # Imagen producto 2
+├── Cafe-Cate-Espresso-300x300.jpg               # Imagen producto 3
+├── ES-CAFE-GOURMET-POSTAL-300x300.jpg           # Imagen producto 4
+├── ES-CAFE-PACAMARA-340-G-POSTAL-300x300.jpg    # Imagen producto 5
+├── Montaje-refrigerador-300x300.jpg             # Imagen producto 6
+├── README.md                                     # Este archivo
+├── prompt.txt                                    # Instrucciones originales
+└── .gitignore                                    # Archivo de exclusión de Git
 ```
 
 ## 🚀 Cómo Usar
@@ -84,7 +89,7 @@ Simplemente abre el archivo `index.html` en tu navegador web preferido.
 - Observa los precios y características únicas
 
 ### 4. Usar el Carrito
-- Haz clic en "Agregar al Carrito" en cualquier producto
+- Haz clic en "Seleccionar opciones" para granos de café o "Añadir al carrito" para accesorios
 - Verás una notificación de confirmación
 - El contador del carrito se actualiza automáticamente
 
@@ -175,13 +180,14 @@ La página está optimizada para:
 
 ## 🚀 Futuras Mejoras
 
-- **Filtros de Productos**: Por país, precio, tipo de café
+- **Filtros de Productos**: Por categoría (granos/accesorios), precio, tipo de café
 - **Búsqueda**: Función de búsqueda en productos
 - **Favoritos**: Lista de productos favoritos
 - **Historial**: Historial de compras
 - **Reseñas**: Sistema de calificaciones y comentarios
 - **Notificaciones Push**: Alertas de nuevos productos
 - **Modo Oscuro**: Tema alternativo para la página
+- **Más Productos**: Ampliar catálogo con más variedades de café y accesorios
 
 ## 📝 Notas del Proyecto
 
@@ -192,6 +198,7 @@ Este es un proyecto de demostración (mockup) que simula una tienda de café rea
 - Los formularios no envían datos reales
 - No hay backend o base de datos
 - Las transacciones de pago son simuladas
+- Solo 6 productos disponibles (5 granos de café + 1 accesorio)
 
 ### Uso Recomendado
 - Demostración de diseño web
