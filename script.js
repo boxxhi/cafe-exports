@@ -94,7 +94,7 @@ function loadProducts() {
                 <p class="product-description">${product.description}</p>
                 <div class="product-price">$${product.price.toFixed(2)}</div>
                 <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
-                    ${product.category === 'accesorios' ? 'Añadir al carrito' : 'Seleccionar opciones'}
+                    Agregar al carrito
                 </button>
             </div>
         `;
