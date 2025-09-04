@@ -2,99 +2,51 @@
 const products = [
     {
         id: 1,
-        name: "Café Colombiano Premium",
-        description: "Granos de café arábica de las montañas de Colombia. Notas de chocolate negro y frutas rojas.",
-        price: 24.99,
-        image: "☕",
+        name: "BALAM FIREBAT GESHA NATURAL - 340G",
+        description: "Café de origen único con notas florales y cítricas. Procesado de forma natural para resaltar su dulzura natural.",
+        price: 22.00,
+        image: "BALAM-Firebat-Gesha-Natural-300x300.jpg",
         category: "granos"
     },
     {
         id: 2,
-        name: "Café Etíope Yirgacheffe",
-        description: "Café de origen único con notas florales, cítricos y un cuerpo sedoso. Perfecto para métodos de filtrado.",
-        price: 29.99,
-        image: "🌺",
+        name: "BALAM FIREBAT PACAMARA HONEY – 340G",
+        description: "Café procesado con miel que aporta dulzura y cuerpo. Notas de caramelo y frutas tropicales.",
+        price: 18.00,
+        image: "BALAM-Firebat-Pacamara-Honey-300x300.jpg",
         category: "granos"
     },
     {
         id: 3,
-        name: "Café Guatemalteco Antigua",
-        description: "Granos de altura con notas de especias, chocolate y un toque ahumado. Ideal para espresso.",
-        price: 26.99,
-        image: "🏔️",
+        name: "CAFÉ CATÉ ESPRESSO - 340G",
+        description: "Mezcla perfecta para espresso con notas de chocolate y caramelo. Ideal para preparaciones intensas.",
+        price: 10.00,
+        image: "Cafe-Cate-Espresso-300x300.jpg",
         category: "granos"
     },
     {
         id: 4,
-        name: "Café Brasileño Santos",
-        description: "Café suave y equilibrado con notas de nueces y caramelo. Perfecto para mezclas y café con leche.",
-        price: 22.99,
-        image: "🌰",
+        name: "ES-COFFEE BOURBON GOURMET - 340G",
+        description: "Variedad Bourbon de alta calidad con notas de chocolate negro y frutos secos.",
+        price: 9.00,
+        image: "ES-CAFE-GOURMET-POSTAL-300x300.jpg",
         category: "granos"
     },
     {
         id: 5,
-        name: "Café Costa Rica Tarrazú",
-        description: "Café de altura con acidez brillante y notas de miel, cítricos y especias.",
-        price: 27.99,
-        image: "🍯",
+        name: "ES-COFFEE PACAMARA - 340G",
+        description: "Café Pacamara con cuerpo sedoso y notas de chocolate, especias y un toque de vainilla.",
+        price: 12.00,
+        image: "ES-CAFE-PACAMARA-340-G-POSTAL-300x300.jpg",
         category: "granos"
     },
     {
         id: 6,
-        name: "Café Peruano Orgánico",
-        description: "Granos orgánicos certificados con notas de chocolate, frutos secos y un cuerpo medio.",
-        price: 31.99,
-        image: "🌿",
-        category: "granos"
-    },
-    {
-        id: 7,
-        name: "Café Mexicano Chiapas",
-        description: "Café de altura con notas de chocolate, especias y un toque de vainilla.",
-        price: 25.99,
-        image: "🌶️",
-        category: "granos"
-    },
-    {
-        id: 8,
-        name: "Café Nicaragüense Jinotega",
-        description: "Café de montaña con notas de caramelo, frutas tropicales y un cuerpo sedoso.",
-        price: 28.99,
-        image: "🌴",
-        category: "granos"
-    },
-    {
-        id: 9,
-        name: "Café Hondureño Marcala",
-        description: "Café de altura con notas de chocolate, frutas rojas y un toque de especias.",
-        price: 26.99,
-        image: "🍫",
-        category: "granos"
-    },
-    {
-        id: 10,
-        name: "Café Salvadoreño Santa Ana",
-        description: "Café de origen único con notas de miel, cítricos y un cuerpo equilibrado.",
-        price: 27.99,
-        image: "🍊",
-        category: "granos"
-    },
-    {
-        id: 11,
-        name: "Café Panameño Boquete",
-        description: "Café de altura con notas de chocolate, frutas tropicales y un toque de especias.",
-        price: 32.99,
-        image: "🌺",
-        category: "granos"
-    },
-    {
-        id: 12,
-        name: "Café Dominicano Barahona",
-        description: "Café de montaña con notas de caramelo, frutos secos y un cuerpo sedoso.",
-        price: 24.99,
-        image: "🥜",
-        category: "granos"
+        name: "IMÁN PEQUEÑO DE CANASTA",
+        description: "Iman decorativo con diseño de canasta tejida. Perfecto para decorar tu refrigerador o cualquier superficie metálica.",
+        price: 2.50,
+        image: "Montaje-refrigerador-300x300.jpg",
+        category: "accesorios"
     }
 ];
 
@@ -132,14 +84,17 @@ function loadProducts() {
         productCard.className = 'product-card';
         productCard.innerHTML = `
             <div class="product-image">
-                <span>${product.image}</span>
+                <img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="product-image-fallback" style="display: none;">
+                    <i class="fas fa-coffee"></i>
+                </div>
             </div>
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
                 <div class="product-price">$${product.price.toFixed(2)}</div>
                 <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
-                    Agregar al Carrito
+                    ${product.category === 'accesorios' ? 'Añadir al carrito' : 'Seleccionar opciones'}
                 </button>
             </div>
         `;
